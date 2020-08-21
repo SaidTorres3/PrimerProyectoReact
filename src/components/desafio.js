@@ -15,8 +15,8 @@ const Desafio = () => {
             <input id="nombre" type="text" id="input" placeholder="Ingresa tu nombre"
                 value={value} onChange={event => setValue(event.target.value)} />
 
-            {/* <p>Elige el color que quieres.</p>
-            <select name="color" id="selector">
+            <p>Elige el color que quieres.</p>
+            <select name="color" id="selector" >
                 <option value="azul">Azul</option>
                 <option value="rojo">Rojo</option>
                 <option value="amarillo">Amarillo</option>
@@ -29,7 +29,8 @@ const Desafio = () => {
                 <option value="aleatorio">Aleatorio</option>
             </select>
             <br></br>
-            <br></br> */}
+            <br></br>
+
             <button type="button" onClick={handleClick} >
                 Aplicar
             </button>
