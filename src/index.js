@@ -6,10 +6,7 @@ import Desafio from './components/desafio';
 const element = (
      <div>
           <form>
-               <input type="text" id="texto"/>
-               <input type="button" id="boton" value="Botón"/>
-               <div></div>
-               <LaHora hora={true} extra={'hola'}/>
+               <LaHora hora={true}/>
                <br/>
                <LaHora hora={false}/>
                <Desafio/>

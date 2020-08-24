@@ -13,6 +13,15 @@ const Desafio = () => {
             alert("Ingrese todos los datos para aplicar.");
             return;
         }
+        
+        if(color=='aleatorio'){
+            /*let resultado = () => {
+                Math.random()
+            }
+            setColor(resultado)*/
+
+            console.log(Math.random())
+        }
 
         setDatos([...datos, {nombre: nombre, color: color, edad: edad}]);
         setNombre('');

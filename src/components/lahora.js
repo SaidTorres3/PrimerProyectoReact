@@ -5,14 +5,11 @@ const LaHora = ({ hora, extra }) => {
         return (
             <strong>
                 {new Date().toLocaleString()}
-                {extra}
             </strong>
         )
     }
     return (
         <strong>
-            {new Date().toLocaleDateString()}
-            {extra}
         </strong>
     )
 }
