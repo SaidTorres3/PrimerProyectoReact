@@ -1,7 +1,16 @@
-body{
+.theElementsInside{
     color: white;
-    background-color: black;
     text-align: center;
     justify-items: center;
+    padding-top:10%;
+    padding-bottom:10%;
+}
+
+.theBox{
+    background-color: black;
+}
+
+body{
+    background-color: black;
 }
 

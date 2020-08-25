@@ -5,8 +5,8 @@ import Desafio from './components/desafio';
 import './styles/generalStyles.css';
 
 const element = (
-     <div className="generalStyles">
-          <form>
+     <div className="theBox">
+          <form className="theElementsInside">
                <LaHora hora={true}/>
                <br/>
                <br/>
