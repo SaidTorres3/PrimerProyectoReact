@@ -15,51 +15,51 @@ const Desafio = () => {
         }
         
         if(color==="aleatorio"){
-            let resultado = Math.round(Math.random()*7);
-            console.log("Ha entrado en el if de aleatorio, el número aleatorio es: " + resultado);
-
-            switch(resultado){
-                case 0:
-                    setColor('blue');
-                    console.log("Se ha activado 0");
-                    break;
-                case 1:
-                    setColor('red');
-                    console.log("Se ha activado 1");
-                    break;
-                case 2:
-                    setColor('yellow');
-                    console.log("Se ha activado 2");
-                    break;
-                case 3:
-                    setColor('green');
-                    console.log("Se ha activado 3");
-                    break;
-                case 4:
-                    setColor('orange');
-                    console.log("Se ha activado 4");
-                    break;
-                case 5:
-                    setColor('purple');
-                    console.log("Se ha activado 5");
-                    break;
-                case 6:
-                    setColor('pink');
-                    console.log("Se ha activado 6");
-                    break;
-                case 7:
-                    setColor('white');
-                    console.log("Se ha activado 7");
-                    break;
-                default: setColor('blue');
-            }
+            aleatorizador();
+            return;
         }
 
-        console.log(color);
         setDatos([...datos, {nombre: nombre, color: color, edad: edad}]);
         setNombre('');
         setEdad('');
         setColor('blue');
+    }
+
+    const aleatorizador = () => {
+        let numeroAleatorio = Math.round(Math.random()*7);
+        let resultado;
+            switch(numeroAleatorio){
+                case 0:
+                    resultado = "blue";
+                    break;
+                case 1:
+                    resultado = "red";
+                    break;
+                case 2:
+                    resultado = "yellow";
+                    break;
+                case 3:
+                    resultado = "green";
+                    break;
+                case 4:
+                    resultado = "orange";
+                    break;
+                case 5:
+                    resultado = "purple";
+                    break;
+                case 6:
+                    resultado = "pink";
+                    break;
+                case 7:
+                    resultado = "white";
+                    break;
+                default: resultado = "blue";
+            }
+
+            setDatos([...datos, {nombre: nombre, color: resultado, edad: edad}]);
+            setNombre('');
+            setEdad('');
+            setColor('blue');
     }
 
     return (
@@ -87,7 +87,7 @@ const Desafio = () => {
             <br></br>
             <br></br>
 
-            <button type="button" onClick={handleClick} >
+            <button type="button" onClick={handleClick}>
                 Aplicar
             </button>
 
