@@ -14,15 +14,48 @@ const Desafio = () => {
             return;
         }
         
-        if(color=='aleatorio'){
-            /*let resultado = () => {
-                Math.random()
-            }
-            setColor(resultado)*/
+        if(color==="aleatorio"){
+            let resultado = Math.round(Math.random()*7);
+            console.log("Ha entrado en el if de aleatorio, el número aleatorio es: " + resultado);
 
-            console.log(Math.random())
+            switch(resultado){
+                case 0:
+                    setColor('blue');
+                    console.log("Se ha activado 0");
+                    break;
+                case 1:
+                    setColor('red');
+                    console.log("Se ha activado 1");
+                    break;
+                case 2:
+                    setColor('yellow');
+                    console.log("Se ha activado 2");
+                    break;
+                case 3:
+                    setColor('green');
+                    console.log("Se ha activado 3");
+                    break;
+                case 4:
+                    setColor('orange');
+                    console.log("Se ha activado 4");
+                    break;
+                case 5:
+                    setColor('purple');
+                    console.log("Se ha activado 5");
+                    break;
+                case 6:
+                    setColor('pink');
+                    console.log("Se ha activado 6");
+                    break;
+                case 7:
+                    setColor('white');
+                    console.log("Se ha activado 7");
+                    break;
+                default: setColor('blue');
+            }
         }
 
+        console.log(color);
         setDatos([...datos, {nombre: nombre, color: color, edad: edad}]);
         setNombre('');
         setEdad('');
@@ -32,11 +65,11 @@ const Desafio = () => {
     return (
         <div>
             <p>Ingresa tu nombre.</p>
-            <input id="nombre" type="text" id="input" placeholder="Ingresa tu nombre"
+            <input id="nombre" type="text" id="nombre" placeholder="Ingresa tu nombre"
                 value={nombre} onChange={event => setNombre(event.target.value)} />
 
             <p>Ingresa tu edad.</p>
-            <input id="edad" type="text" id="input" placeholder="Ingresa tu edad"
+            <input id="edad" type="text" id="edad" placeholder="Ingresa tu edad"
                 value={edad} onChange={event => setEdad(event.target.value)} />
 
             <p>Elige el color que quieres.</p>
@@ -48,7 +81,6 @@ const Desafio = () => {
                 <option value="orange">Naranja</option>
                 <option value="purple">Morado</option>
                 <option value="pink">Rosa</option>
-                <option value="black">Negro</option>
                 <option value="white">Blanco</option>
                 <option value="aleatorio">Aleatorio</option>
             </select>

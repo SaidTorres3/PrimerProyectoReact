@@ -1,16 +1,15 @@
 import React from 'react'
 
-const LaHora = ({ hora, extra }) => {
-    if (hora) {
-        return (
-            <strong>
+class LaHora extends React.Component{
+
+    render(){
+        return(
+        <strong>
                 {new Date().toLocaleString()}
-            </strong>
+        </strong>
         )
     }
-    return (
-        <strong>
-        </strong>
-    )
+
 }
+
 export default LaHora

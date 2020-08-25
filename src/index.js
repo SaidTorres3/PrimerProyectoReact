@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LaHora from './components/lahora';
 import Desafio from './components/desafio';
+import './styles/generalStyles.css';
 
 const element = (
-     <div>
+     <div className="generalStyles">
           <form>
                <LaHora hora={true}/>
                <br/>
-               <LaHora hora={false}/>
+               <br/>
                <Desafio/>
           </form>
    </div>
@@ -16,13 +17,3 @@ const element = (
 
 const container = document.getElementById('app');
 ReactDOM.render(element, container);
-
-var prueba = document.getElementById("boton");
-var texto = document.getElementById("texto");
-
-prueba.addEventListener("click", experimento);
-
-function experimento(){
-     var valor = texto.value;
-     alert("El valor ingresado es: " + valor);
-}
